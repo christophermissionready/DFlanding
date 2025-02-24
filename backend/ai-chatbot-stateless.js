@@ -267,7 +267,7 @@ async function analyzeInterview(jobTitle, history = []) {
         if (formattedHistory.length === 0) {
             formattedHistory.push({
                 role: "user",
-                parts: [{ text: `You are an expert business strategist analyzing responses for ${jobTitle}. Please provide feedback on the applicant's responses without analyzing the interviewer's questions.` }]
+                parts: [{ text: `You are an expert business strategist analyzing responses for ${jobTitle}. Please provide a solution to the applicant's requests without analyzing the interviewer's questions.` }]
             });
         }
 
@@ -286,7 +286,8 @@ async function analyzeInterview(jobTitle, history = []) {
                     5. Finally, give a percentage chance the idea will succeed.
                     
                     Only analyze the users's responses, not the interviewer's questions.
-                    Be constructive and encouraging while providing specific examples from their responses.` }]
+                    Be constructive and encouraging while providing specific examples from their responses
+                    Provide specific ideas.` }]
                 }
             ]
         });
@@ -296,7 +297,7 @@ async function analyzeInterview(jobTitle, history = []) {
 
         // Send analysis request
         const result = await chat.sendMessageStream(
-            "Please analyze the user's responses as a business strategist and provide detailed feedback."
+            "Please analyze the user's responses as a business strategist and provide detailed solutions."
         );
 
         // Capture AI's analysis response
