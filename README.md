@@ -1,21 +1,23 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
+In base directory create .env file in this format
+API_KEY="PUT API KEY HERE"
+GEMINI_MODEL_NAME="gemini-1.5-flash"
 
-Firstly, install dependencies:
-
+Install dependenciees and run the development server:
 ```bash
 npm install
-```
-
-Then run the development server:
-
-```bash
 npm run dev
-# or
-pnpm dev
-
 ```
+
+cd into backend, install dependencies and run server.js
+```bash
+cd ./backend
+npm install
+node server.js
+```
+
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
