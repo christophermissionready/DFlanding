@@ -10,7 +10,9 @@ export default function Home() {
   const [prevCount, setPrevCount] = useState(1); //Previous fib number
   return (
    <>
-   <div className="h-screen flex items-center justify-center">
+
+   <div className='flex justify-center items-center w-2/3'>
+    <div className="h-screen flex items-center justify-center">
     <div className="prose text-center">
       <div className="flex justify-center">
         <Image src={dfimage} alt="DF Alpha 2" width={300} height={300} />
@@ -40,6 +42,12 @@ export default function Home() {
       {count} 
     </div>
   </div>
+  <div>
+    <h1>Chatscreen side</h1>
+  
+
+  </div></div>
+   
     
    </>
   );
